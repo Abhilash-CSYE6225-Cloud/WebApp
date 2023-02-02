@@ -2,7 +2,7 @@
 
 
 ## Goal
-<span style="background-color: #FFFF00">The main goal of this assignment is to build a APIs for an User to register and retreive his details using Node.js</span>
+<span style="background-color: #F8FF00">The main goal of this assignment is to build a APIs for an User to register and retreive his details using Node.js</span>
 
 ## Features
 * As a developer, I am able to create new account by providing the following fields as an input
