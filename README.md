@@ -30,13 +30,12 @@
   ### APIs
 
   Available APIs in the project:
-  This is built using REST API and appropriate conventions Using Express
+  This is built using REST API and appropriate conventions
   
   ### How to use
 
     Run: Node listener.js
     Test:  npm run test 
-    
 
 
   *Retreive neccesary user details by id*:
@@ -57,5 +56,3 @@
   * Health Check *:
    
     GET /healthz
-
-    
