@@ -2,7 +2,7 @@
 
 
 ## Goal
-<span style="background-color: #F8FF00">The main goal of this assignment is to build a APIs for an User to register and retreive his details using Node.js</span>
+<span style="background-color: #FFFF00">The main goal of this assignment is to build a APIs for an User to register and retreive his details using Node.js</span>
 
 ## Features
 * As a developer, I am able to create new account by providing the following fields as an input
@@ -30,12 +30,13 @@
   ### APIs
 
   Available APIs in the project:
-  This is built using REST API and appropriate conventions
+  This is built using REST API and appropriate conventions Using Express
   
   ### How to use
 
     Run: Node listener.js
     Test:  npm run test 
+    
 
 
   *Retreive neccesary user details by id*:
@@ -56,3 +57,5 @@
   * Health Check *:
    
     GET /healthz
+
+    
