@@ -150,14 +150,13 @@ const prodGet = async(request,response)=>{
 const prodPatch = async(request,response)=>{
     const id = Number(request.params.id);
     console.log(id)
-    
-    if(!id || typeof id === "string"){
-        response.status(400).send({message:"invalid Id"})
-    }
-   else if (!request.headers.authorization){
+   if (!request.headers.authorization){
      response.status(400).send({
        message:"No Auth",
    });
+   }
+   else if(!id || typeof id === "string"){
+    response.status(400).send({message:"invalid Id"})
    }
    else{
         const encodedToken = request.headers.authorization.split(" ")[1];
@@ -247,6 +246,9 @@ const prodDelete= async(request,response)=>
        message:"No Auth",
    });
    }
+   else if(!id || typeof id === "string"){
+    response.status(400).send({message:"invalid Id"})
+   }
    else{
         const encodedToken = request.headers.authorization.split(" ")[1];
         const baseToAlpha = base64.decode(encodedToken).split(":");
@@ -313,14 +315,13 @@ const prodDelete= async(request,response)=>
 const prodPut = async(request,response)=>{
     const id = Number(request.params.id);
     console.log(id)
-    
-    if(!id || typeof id === "string"){
-        response.status(400).send({message:"invalid Id"})
-    }
-   else if (!request.headers.authorization){
+   if (!request.headers.authorization){
      response.status(400).send({
        message:"No Auth",
    });
+   }
+   else if(!id || typeof id === "string"){
+    response.status(400).send({message:"invalid Id"})
    }
    else{
         const encodedToken = request.headers.authorization.split(" ")[1];
