@@ -155,9 +155,11 @@ const prodPatch = async(request,response)=>{
        message:"No Auth",
    });
    }
+
    else if(!id || typeof id === "string"){
     response.status(400).send({message:"invalid Id"})
    }
+
    else{
         const encodedToken = request.headers.authorization.split(" ")[1];
         const {name,description,sku,manufacturer,quantity,date_added,date_last_updated,owner_user_id} = request.body;
@@ -246,9 +248,11 @@ const prodDelete= async(request,response)=>
        message:"No Auth",
    });
    }
+
    else if(!id || typeof id === "string"){
     response.status(400).send({message:"invalid Id"})
    }
+
    else{
         const encodedToken = request.headers.authorization.split(" ")[1];
         const baseToAlpha = base64.decode(encodedToken).split(":");
@@ -320,9 +324,11 @@ const prodPut = async(request,response)=>{
        message:"No Auth",
    });
    }
+
    else if(!id || typeof id === "string"){
     response.status(400).send({message:"invalid Id"})
    }
+
    else{
         const encodedToken = request.headers.authorization.split(" ")[1];
         const {name,description,sku,manufacturer,quantity,date_added,date_last_updated,owner_user_id} = request.body;
