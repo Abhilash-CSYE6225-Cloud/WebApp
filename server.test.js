@@ -6,7 +6,7 @@ describe("GET /healthz", () => {
    await request(app)
       .get("/healthz")
       .set("Accept", "application/json")
-      .expect(400)
+      .expect(200)
   });
 });
 
