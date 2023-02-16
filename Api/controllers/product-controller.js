@@ -56,7 +56,7 @@ const prodPost = async (request,response)=>{
                     message: "SKU exists",})}
                 else{
                  Product.create({
-                        
+                            
                             name:name,
                             description:description,
                             sku:sku,
@@ -72,7 +72,7 @@ const prodPost = async (request,response)=>{
                     .then((feedback)=>{
                        
                             response.status(201).send({
-                                
+                                id: feedback.getDataValue("id"),
                                 name: feedback.getDataValue("name"),
                                 description: feedback.getDataValue("description"),
                                 sku: feedback.getDataValue("sku"),
@@ -407,10 +407,7 @@ const prodPut = async(request,response)=>{
                 }
             }
             )
-            .catch(() => {
-                response.status(401).send({
-                  message: "Bad Request. Incorrect password",
-                })});
+            
 
             } else{response.status(401).send({
                 message: "Invalid Password",
@@ -418,6 +415,10 @@ const prodPut = async(request,response)=>{
 
             }}
         )
+        .catch(() => {
+            response.status(401).send({
+              message: "Bad Request. Incorrect ID",
+            })});
    }}
     
 }
