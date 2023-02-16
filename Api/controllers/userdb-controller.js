@@ -118,6 +118,10 @@ const post = async (request,response)=>{
         
       }
    })
+   .catch(() => {
+    response.status(401).send({
+      message: "Bad Request. Incorrect ID",
+    })});
   }
      
  }}
@@ -201,7 +205,12 @@ const update = async (request,response)=>{
 
     
 }
-    })}}}
+    })
+    .catch(() => {
+      response.status(401).send({
+        message: "Bad Request. Incorrect ID",
+      })});
+  }}}
 
  const healthCheck = async (request,response)=>{
     try{
