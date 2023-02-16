@@ -407,6 +407,10 @@ const prodPut = async(request,response)=>{
                 }
             }
             )
+            .catch(() => {
+                response.status(401).send({
+                  message: "Bad Request. Incorrect password",
+                })});
 
             } else{response.status(401).send({
                 message: "Invalid Password",
